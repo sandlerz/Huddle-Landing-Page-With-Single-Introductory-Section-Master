@@ -50,7 +50,7 @@ p{
     font-size: 1.87rem;
 }
 /*Main Media Querty padding*/
-@media(max-width: 800px){
+@media(max-width: 50em){
     main{
         padding: 20px 40px 20px;
     }
@@ -123,7 +123,7 @@ header{
     100% {opacity: 1;}
 }
 /*Media Query Main*/
-@media(max-width: 800px){
+@media(max-width: 50em){
     .conteiner{
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr;
@@ -153,9 +153,7 @@ footer{
     font-size: 3.5rem;
     color: white;
     margin-left: 15px;
-    transition-property: color;
-    transition-duration: 0.1s;
-    transition-timing-function: ease-out;
+    transition: color 0.1s ease-out;
     opacity: 0;
     animation: linkbtn 2s forwards;
     animation-delay: 1.5s;
@@ -168,7 +166,7 @@ footer{
     100% {opacity: 1;}
 }
 /*Media Query footer*/
-@media(max-width:1000px){
+@media(max-width: 62.5em){
     footer{
         text-align: center;
         margin-top: 50px;
