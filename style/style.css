@@ -1,20 +1,13 @@
-/*# Front-end Style Guide
-
-## Layout
-
+/*
 The designs were created to the following widths:
 
 - Mobile: 375px
 - Desktop: 1440px
 
-## Colors
-
 ### Primary
 
 - Violet: hsl(257, 40%, 49%)
 - Soft Magenta: hsl(300, 69%, 71%)
-
-## Typography
 
 ### Headings
 
@@ -24,12 +17,87 @@ The designs were created to the following widths:
 ### Body
 
 - Family: [Open Sans](https://fonts.google.com/specimen/Open+Sans)
-- Weights: 400
-
-## Icons
-
-For the social icons, you can use a font icon library. Some suggestions can be found below:
-
-- [Font Awesome](https://fontawesome.com/)
-- [IcoMoon](https://icomoon.io/)
-- [Ionicons](https://ionicons.com/)*/
+- Weights: 400*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+/*Global*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    min-height: 100vh;
+    background-image: url(../images/bg-desktop.svg);
+    background-color: hsl(257, 40%, 49%);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+main{
+    max-width: 1440px;
+    max-height: 800px;
+    margin: auto;
+    padding: 60px 80px 40px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+h1{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    color: white;
+    font-size: 3.5rem;
+}
+p{
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.87rem;
+}
+/*Main*/
+.logo{
+    width: 200px;
+    margin-bottom: 100px;
+}
+.conteiner{
+    margin-bottom: 5px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.illustration{
+    max-width: 100%;
+    height: auto;
+    justify-self: center;
+    align-self: center;
+}
+.conteiner_text{
+    margin: 40px 0 0 50px;
+}
+header{
+    max-width: 400px;
+}
+.conteiner_text p{
+    margin: 30px 0;
+}
+.conteiner_text button{
+    padding: 17px 80px;
+    border: none;
+    border-radius: 30px;
+    color: hsl(257, 40%, 49%);
+    background-color: white;
+    font-size: 1.8rem;
+    box-shadow: 0px 4px 20px 3px hsl(257, 34%, 26%);
+    cursor: pointer;
+}
+/*Footer socials*/
+footer{
+    text-align: right;
+}
+.linkbtn{
+    font-size: 3.5rem;
+    color: white;
+    margin-left: 15px;
+}

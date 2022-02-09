@@ -1,3 +1,0 @@
-### Links
-
-- Live Site URL: 
