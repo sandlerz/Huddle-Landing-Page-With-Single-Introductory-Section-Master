@@ -7,17 +7,8 @@ The designs were created to the following widths:
 ### Primary
 
 - Violet: hsl(257, 40%, 49%)
-- Soft Magenta: hsl(300, 69%, 71%)
+- Soft Magenta: hsl(300, 69%, 71%)*/
 
-### Headings
-
-- Family: [Poppins](https://fonts.google.com/specimen/Poppins)
-- Weights: 400, 600
-
-### Body
-
-- Family: [Open Sans](https://fonts.google.com/specimen/Open+Sans)
-- Weights: 400*/
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
 /*Global*/
 *{
@@ -57,21 +48,26 @@ p{
     font-family: 'Open Sans', sans-serif;
     font-size: 1.87rem;
 }
+@media(max-width: 800px){
+    main{
+        padding: 20px 40px 20px;
+    }
+}
 /*Main*/
 .logo{
     width: 200px;
-    margin-bottom: 100px;
 }
 .conteiner{
-    margin-bottom: 5px;
+    margin-top: 100px;
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
 .illustration{
     max-width: 100%;
     height: auto;
-    justify-self: center;
-    align-self: center;
+    justify-content: center;
+    align-content: center;
+    margin: auto 0;
 }
 .conteiner_text{
     margin: 40px 0 0 50px;
@@ -91,13 +87,54 @@ header{
     font-size: 1.8rem;
     box-shadow: 0px 4px 20px 3px hsl(257, 34%, 26%);
     cursor: pointer;
+    transition-property: background-color,color;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+} 
+.conteiner_text button:hover{
+    background-color: hsl(300, 69%, 71%);
+    color: white;
+}
+@media(max-width: 800px){
+    .conteiner{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        margin: 25px auto 0;
+    }
+    .illustration{
+        width: 75%;
+        margin: auto;
+    }
+    header{
+        margin: auto;
+    }
+    .conteiner_text{
+        margin: auto;
+        text-align: center;
+    }
+    .conteiner_text button{
+        padding: 13px 100px;
+    }
 }
 /*Footer socials*/
 footer{
     text-align: right;
+    margin-top: 5px;
 }
 .linkbtn{
     font-size: 3.5rem;
     color: white;
     margin-left: 15px;
+    transition-property: color;
+    transition-duration: 0.1s;
+    transition-timing-function: ease-out;
+}
+.linkbtn:hover{
+    color: hsl(300, 69%, 71%);
+}
+@media(max-width:1000px){
+    footer{
+        text-align: center;
+        margin-top: 50px;
+    }
 }
