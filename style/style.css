@@ -18,6 +18,7 @@ The designs were created to the following widths:
 }
 html{
     font-size: 62.5%;
+    overflow-x: hidden;
 }
 body{
     min-height: 100vh;
@@ -48,6 +49,7 @@ p{
     font-family: 'Open Sans', sans-serif;
     font-size: 1.87rem;
 }
+/*Main Media Querty padding*/
 @media(max-width: 800px){
     main{
         padding: 20px 40px 20px;
@@ -56,6 +58,12 @@ p{
 /*Main*/
 .logo{
     width: 200px;
+    position: relative;
+    animation: heading 4s forwards ease;
+}
+@keyframes heading {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
 }
 .conteiner{
     margin-top: 100px;
@@ -68,9 +76,21 @@ p{
     justify-content: center;
     align-content: center;
     margin: auto 0;
+    position: relative;
+    animation: illustration 1.5s forwards ease;
+}
+@keyframes illustration {
+    0% {left: -200px; opacity: 0;}
+    100% {left: 0; opacity: 1;}
 }
 .conteiner_text{
     margin: 40px 0 0 50px;
+    position: relative;
+    animation: conteiner_text 1.5s forwards ease;
+}
+@keyframes conteiner_text {
+    0% {right: -200px; opacity: 0;}
+    100% {right: 0; opacity: 1;}
 }
 header{
     max-width: 400px;
@@ -90,11 +110,19 @@ header{
     transition-property: background-color,color;
     transition-duration: 0.3s;
     transition-timing-function: ease-out;
+    opacity: 0;
+    animation: button 1s forwards;
+    animation-delay: 1.3s;
 } 
 .conteiner_text button:hover{
     background-color: hsl(300, 69%, 71%);
     color: white;
 }
+@keyframes button{
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+/*Media Query Main*/
 @media(max-width: 800px){
     .conteiner{
         grid-template-columns: 1fr;
@@ -128,10 +156,18 @@ footer{
     transition-property: color;
     transition-duration: 0.1s;
     transition-timing-function: ease-out;
+    opacity: 0;
+    animation: linkbtn 2s forwards;
+    animation-delay: 1.5s;
 }
 .linkbtn:hover{
     color: hsl(300, 69%, 71%);
 }
+@keyframes linkbtn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+/*Media Query footer*/
 @media(max-width:1000px){
     footer{
         text-align: center;
